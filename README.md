@@ -1,5 +1,6 @@
 # demoAngular
 this is an example of using AngularJS6 with socketIO and material control
+
 Hướng dẫn cài đăt:
 1. clone respository 
 git clone https://github.com/lamvananh/demoAngular6.git
