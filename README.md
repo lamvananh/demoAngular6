@@ -2,16 +2,20 @@
 this is an example of using AngularJS6 with socketIO and material control
 
 Hướng dẫn cài đăt:
-1. clone respository 
+1. clone respository:
+
 git clone https://github.com/lamvananh/demoAngular6.git
+
 2. duyệt CMD tới thư mục đã tải về
 
 3. cài các module cho client: duyệt CMD tới thư mục client và chạy lệnh:
 
 	npm install       
+	
 4.Cài các module cho server: duyệt CMD tới thư mục "server" và chạy lệnh:
 
 	npm install
+	
 Vui lòng đợi đến khi quá trình cài đặt hoàn tất.
 
 Hướng dẫn buid server:
