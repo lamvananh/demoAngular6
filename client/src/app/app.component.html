@@ -1,0 +1,88 @@
+<div class="table-wrap">
+  <div class="page-label">S&amp;P/ASX</div>
+  <mat-tab-group selectedIndex=0>
+
+    <mat-tab label="TOP GAINERS">
+
+      <mat-table [dataSource]="dataSourceGain" class="mat-elevation-z8">
+        <!-- Position Column -->
+        <ng-container matColumnDef="code">
+          <mat-header-cell *matHeaderCellDef> Code </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.code}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="company">
+          <mat-header-cell *matHeaderCellDef> Company </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.company}} </mat-cell>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="price">
+          <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.price}} </mat-cell>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="value">
+          <mat-header-cell *matHeaderCellDef> Value </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.value| number}} </mat-cell>
+        </ng-container>
+        <!-- Change Column -->
+        <ng-container matColumnDef="change">
+          <mat-header-cell *matHeaderCellDef> Change </mat-header-cell>
+          <mat-cell *matCellDef="let element" [ngClass]="{'green' : element.changeType == 1,'red' : element.changeType == 2}"> {{element.change}} </mat-cell>
+        </ng-container>
+        <!-- Change Column -->
+        <ng-container matColumnDef="percentChange">
+          <mat-header-cell *matHeaderCellDef> %Change </mat-header-cell>
+          <mat-cell *matCellDef="let element" [ngClass]="{'green' : element.changeType == 1,'red' : element.changeType == 2}"> {{element.percentChange}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+
+    </mat-tab>
+    <mat-tab label="TOP LOSERS">
+      <mat-table [dataSource]="dataSourceLose" class="mat-elevation-z8">
+        <!-- Position Column -->
+        <ng-container matColumnDef="code">
+          <mat-header-cell *matHeaderCellDef> Code </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.code}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="company">
+          <mat-header-cell *matHeaderCellDef> Company </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.company}} </mat-cell>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="price">
+          <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.price}} </mat-cell>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="value">
+          <mat-header-cell *matHeaderCellDef> Value </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.value| number}} </mat-cell>
+        </ng-container>
+        <!-- Change Column -->
+        <ng-container matColumnDef="change">
+          <mat-header-cell *matHeaderCellDef> Change </mat-header-cell>
+          <mat-cell *matCellDef="let element" [ngClass]="{'green' : element.changeType == 1,'red' : element.changeType == 2}"> {{element.change}} </mat-cell>
+        </ng-container>
+        <!-- Change Column -->
+        <ng-container matColumnDef="percentChange">
+          <mat-header-cell *matHeaderCellDef> %Change </mat-header-cell>
+          <mat-cell *matCellDef="let element" [ngClass]="{'green' : element.changeType == 1,'red' : element.changeType == 2}"> {{element.percentChange}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </mat-tab>
+  </mat-tab-group>
+</div>

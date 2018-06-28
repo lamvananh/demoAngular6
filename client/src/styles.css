@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+mat-ink-bar {
+    background-color: #fb6161 !important;
+}
+.mat-tab-labels{
+    background-color: #1ec5e0;
+    color: white;
+    display: block !important;
+    text-align: right;
+}
+
+.mat-tab-label-content{
+    color: white;
+}

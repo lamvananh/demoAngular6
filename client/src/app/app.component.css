@@ -1,0 +1,106 @@
+
+table {
+    width: 100%;
+  }
+  .table-wrap{
+    padding: 0px  10px 2px;
+    width: 80%;
+    margin: auto;
+    background-color: #e8e8e8;
+  }
+  tr.example-detail-row {
+    height: 0;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):hover {
+    background: #f5f5f5;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):active {
+    background: #efefef;
+  }
+  
+  .example-element-row td {
+    border-bottom-width: 0;
+  }
+  
+  .example-element-detail {
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .example-element-diagram {
+    min-width: 80px;
+    border: 2px solid black;
+    padding: 8px;
+    font-weight: lighter;
+    margin: 8px 0;
+    height: 104px;
+  }
+  
+  .example-element-symbol {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: normal;
+  }
+  
+  .example-element-description {
+    padding: 16px;
+  }
+  
+  .example-element-description-attribution {
+    opacity: 0.5;
+  }
+  .mat-column-code[role="gridcell"]{
+      color:blue;
+  }
+ .mat-column-price[role="gridcell"], .mat-column-value[role="gridcell"],.mat-column-change[role="gridcell"]
+  ,.mat-column-percentChange[role="gridcell"]{
+    justify-content: flex-end;
+    
+  }
+  .mat-column-price,.mat-column-value,.mat-column-change,.mat-column-percentChange{
+    max-width: 100px;
+    justify-content: flex-end;
+  }
+  .mat-column-code{
+    max-width: 100px;
+    justify-content: flex-start;
+  }
+  .mat-column-price[role="gridcell"],.mat-column-value[role="gridcell"]{
+    color: black;
+    font-weight: bold;
+  }
+  .mat-column-price{
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+  .green{
+    color:green;
+  }
+  .red{
+    color:red;
+  }
+  .page-label{
+    position: absolute;
+    top: 24px;
+    left: 12%;
+    color: white;
+    z-index: 2;
+    font-size: 17px;
+  }
+  @media( max-width:1024px){
+    .mat-column-price{
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+
+  }
+  @media( max-width:768px){
+    .table-wrap{
+      width: 600px;
+    }
+    .page-label{
+      left: 7%;
+    }
+  }
